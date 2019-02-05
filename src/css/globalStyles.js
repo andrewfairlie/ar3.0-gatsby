@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import fontFiles from './typeface';
 
+console.log(fontFiles.GellerHeadlineBlackWOFF2);
+
 export default createGlobalStyle`
     @font-face {
         font-family: 'Geller Headline';
@@ -119,5 +121,9 @@ export default createGlobalStyle`
             url('${fontFiles.TTCommonsBoldItalicTTF}') format('truetype');
         font-weight: bold;
         font-style: italic;
+    }
+
+    h1 {
+        font-family: 'Geller Headline';
     }
 `;

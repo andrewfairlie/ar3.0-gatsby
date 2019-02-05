@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Container from 'react-bootstrap/Container';
 import '../vendor/bootstrap-grid/bootstrap-grid.min.css';
-import globalStyles from '../css/globalStyles';
+import '../css/globalStyles';
 
 const Logo = styled.h1`
     font-size: 1.5em;
@@ -45,7 +45,6 @@ const NavLink = styled.li`
         color: #e64646;
         text-decoration: none;
         margin-bottom: 0;
-        font-family: 'TT Commons';
         position: relative;
 
         &::after {
