@@ -122,8 +122,4 @@ export default createGlobalStyle`
         font-weight: bold;
         font-style: italic;
     }
-
-    h1 {
-        font-family: 'Geller Headline';
-    }
 `;
