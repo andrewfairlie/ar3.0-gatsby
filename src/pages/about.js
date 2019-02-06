@@ -1,9 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Layout from '../components/Layout';
 
-const aboutPage = () => <Layout />;
+const aboutPage = () => <h1 className="hero">About Me</h1>;
 
 export default aboutPage;
