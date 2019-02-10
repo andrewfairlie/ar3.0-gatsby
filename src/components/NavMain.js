@@ -31,14 +31,76 @@ const NavContainer = styled.div`
 const Nav = styled.nav`
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    .ar-header-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: flex-end;
+        position: fixed;
+        // background-color: $grey-6;
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+        right: 1rem;
+        top: 1.2rem;
+        z-index: 9999;
+        cursor: pointer;
+        transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+
+        &.menu-open {
+            transform: rotate(45deg);
+        }
+
+        @media ${device.md} {
+            display: none;
+        }
+
+        .line-menu {
+            background-color: var(--pri);
+            border-radius: 2px;
+            width: 100%;
+            height: 4px;
+            margin: 5px 0;
+            transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+            z-index: 10;
+        }
+
+        .line-menu.line-half {
+            width: 50%;
+            margin: 0px;
+            background-color: var(--pri-light);
+        }
+
+        .line-menu.first-line {
+            transform-origin: right;
+        }
+
+        &.menu-open .line-menu.first-line {
+            transform: rotate(-90deg) translateX(6px);
+        }
+
+        .line-menu.last-line {
+            align-self: flex-end;
+            transform-origin: left;
+        }
+
+        &.menu-open .line-menu.last-line {
+            transform: rotate(-90deg) translateX(-6px);
+            z-index: -1;
+        }
+    }
 `;
 
 const NavLinkContainer = styled.ul`
     list-style: none;
     text-decoration: none;
-    display: flex;
+    display: none;
     margin: 0 0 0 auto;
+
+    @media ${device.md} {
+        display: flex;
+    }
 `;
 
 const NavLink = styled.li`
@@ -99,6 +161,18 @@ const NavLink = styled.li`
     }
 `;
 
+const isPartiallyActive = ({ isPartiallyCurrent }) => {
+    return isPartiallyCurrent
+        ? { className: 'active navlink' }
+        : { className: 'navlink' };
+};
+
+const PartialNavLink = props => (
+    <Link getProps={isPartiallyActive} {...props}>
+        {props.children}
+    </Link>
+);
+
 const NavMain = () => (
     <NavContainer>
         <Container>
@@ -110,26 +184,34 @@ const NavMain = () => (
                 </Link>
                 <NavLinkContainer>
                     <NavLink>
-                        <Link to="/" activeStyle activeClassName="active">
+                        <Link to="/" activeClassName="active">
                             Home
                         </Link>
                     </NavLink>
                     <NavLink>
-                        <Link to="/#projects" activeClassName="active">
+                        <PartialNavLink
+                            to="/#projects"
+                            activeClassName="active"
+                        >
                             Projects
-                        </Link>
+                        </PartialNavLink>
                     </NavLink>
                     <NavLink>
-                        <Link to="/about" activeClassName="active">
+                        <PartialNavLink to="/about" activeClassName="active">
                             About
-                        </Link>
+                        </PartialNavLink>
                     </NavLink>
                     <NavLink>
-                        <Link to="/blog" activeClassName="active">
+                        <PartialNavLink to="/blog" activeClassName="active">
                             Blog
-                        </Link>
+                        </PartialNavLink>
                     </NavLink>
                 </NavLinkContainer>
+                <div className="ar-header-burger">
+                    <div className="line-menu line-half first-line" />
+                    <div className="line-menu" />
+                    <div className="line-menu line-half last-line" />
+                </div>
             </Nav>
         </Container>
     </NavContainer>

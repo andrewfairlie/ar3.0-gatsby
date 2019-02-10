@@ -8,6 +8,7 @@ const IndexPage = () => (
     <div className="wrapper">
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <h1 className="hero">Design, Code, and everything in between.</h1>
+        <p>Test</p>
     </div>
 );
 

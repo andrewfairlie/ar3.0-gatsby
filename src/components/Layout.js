@@ -87,20 +87,20 @@ const GlobalStyle = createGlobalStyle`
 
         &.hero {
             font-size: 3.3rem;
-            width: 95%;
 
             @media ${device.sm} {
                 font-size: 4rem;
             }
             @media ${device.md} {
-                font-size: 4.5rem;
+                font-size: 6rem;
+                padding-right: 10vw;
             }
             @media ${device.lg} {
-                font-size: 5rem;
+                padding-right: 5vw;
             }
-            @media ${device.xl} {
+            /* @media ${device.xl} {
                 font-size: 6rem;
-            }
+            } */
         }
     }
 `;
@@ -127,7 +127,7 @@ const Layout = ({ children }) => (
                     <footer>
                         © {new Date().getFullYear()}, Built with
                         {` `}
-                        <a href="https://www.gatsbyjs.org">Gatsby</a>
+                        <a href="https://www.gatsbyjs.org">GatsbyJ</a>
                     </footer>
                 </Container>
             </>
