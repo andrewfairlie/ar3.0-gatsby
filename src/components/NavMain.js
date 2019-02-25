@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Container from 'react-bootstrap/Container';
 import '../vendor/bootstrap-grid/bootstrap-grid.min.css';
 import AlfianLogo from '../images/logo';
-import { device } from './queries';
+import { device } from '../styles/queries';
 
 const Logo = styled.div`
     width: 100%;
@@ -20,12 +20,17 @@ const Logo = styled.div`
 
 const NavContainer = styled.div`
     width: 100%;
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     position: fixed;
     top: 0;
     align-items: center;
     background: var(--dark-gradient);
+    z-index: 999;
+
+    @media ${device.md} {
+        padding: 2rem 0;
+    }
 `;
 
 const Nav = styled.nav`
@@ -33,12 +38,12 @@ const Nav = styled.nav`
     align-items: center;
 
     .ar-header-burger {
-        display: flex;
+        /*display: flex;*/
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-self: flex-end;
         position: fixed;
-        // background-color: $grey-6;
         height: 50px;
         width: 50px;
         padding: 10px;
@@ -95,12 +100,12 @@ const Nav = styled.nav`
 const NavLinkContainer = styled.ul`
     list-style: none;
     text-decoration: none;
-    display: none;
+    display: flex;
     margin: 0 0 0 auto;
 
-    @media ${device.md} {
+    ${'' /* @media ${device.md} {
         display: flex;
-    }
+    } */}
 `;
 
 const NavLink = styled.li`

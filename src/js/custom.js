@@ -1,2 +1,3 @@
 const burgerMenu = document.querySelector('.ar-header-burger');
-console.log(burgerMenu);
+
+burgerMenu.addEventListener('click', alert('Hello'));
