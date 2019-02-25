@@ -136,7 +136,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.05;
 
         &.hero {
-            font-size: 3.3rem;
+            font-size: 3.2rem;
             font-family: var(--font-subheading);
 
             @media ${device.sm} {
