@@ -3,7 +3,7 @@ import React from 'react';
 // import Image from '../components/image';
 import styled from 'styled-components';
 import SEO from '../components/seo';
-import Hero from '../components/hero';
+import Hero from '../components/Hero';
 import FeaturedProject from '../components/FeaturedProject';
 import Project from '../components/Project';
 import { device } from '../styles/queries';
