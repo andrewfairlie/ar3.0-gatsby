@@ -24,8 +24,8 @@ export default function HTML(props) {
                     dangerouslySetInnerHTML={{ __html: props.body }}
                 />
                 {props.postBodyComponents}
-                {/* <script src="js/imagesLoaded.js" />
-                <script async src="js/custom.js" /> */}
+                <script src="js/imagesLoaded.js" />
+                <script async src="js/custom.js" />
             </body>
         </html>
     );
