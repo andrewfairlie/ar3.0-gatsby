@@ -18,12 +18,3 @@ function resize() {
 function getStyleValue(element, style) {
     return parseInt(window.getComputedStyle(element).getPropertyValue(style));
 }
-
-// const elem = document.querySelectorAll('.project-image > img');
-// var imgLoad = imagesLoaded(elem);
-// function onAlways(instance) {
-//     resize();
-//     console.log('all images are loaded');
-// }
-// // bind with .on()
-// imgLoad.on('always', onAlways);
