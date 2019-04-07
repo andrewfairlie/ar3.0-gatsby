@@ -12,15 +12,15 @@ const SvgIllustration = () => (
         <g
             id="Prototype"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
         >
             <g
                 id="Home-Desktop"
-                fill-rule="nonzero"
+                fillRule="nonzero"
                 stroke="#E64646"
-                stroke-width="10"
+                strokeWidth="10"
             >
                 <g
                     id="illustration"

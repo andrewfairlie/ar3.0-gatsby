@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Container from 'react-bootstrap/Container';
-import '../vendor/bootstrap-grid/bootstrap-grid.min.css';
 import AlfianLogo from '../images/logo';
 import { device } from '../styles/queries';
 
@@ -38,7 +37,6 @@ const Nav = styled.nav`
     align-items: center;
 
     .ar-header-burger {
-        /*display: flex;*/
         display: none;
         flex-direction: column;
         justify-content: center;

@@ -11,7 +11,7 @@ const SvgIllustrationMobile = () => (
         <g
             fill="none"
             stroke="#E64646"
-            stroke-width="4"
+            strokeWidth="4"
             transform="rotate(15 1467.282 -1591.804)"
         >
             <path

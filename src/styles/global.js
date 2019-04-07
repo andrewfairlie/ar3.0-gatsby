@@ -121,7 +121,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .img-fluid {
-        max-width:100%;height:auto;
+        max-width:100%;
+        height:auto;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -134,26 +135,6 @@ const GlobalStyle = createGlobalStyle`
         margin-top: 2rem;
         margin-bottom: 3rem;
         line-height: 1.05;
-
-        &.hero {
-            font-size: 3.2rem;
-            font-family: var(--font-subheading);
-
-            @media ${device.sm} {
-                font-size: 4rem;
-            }
-            @media ${device.md} {
-                font-size: 5rem;
-                padding-right: 10vw;
-            }
-            @media ${device.lg} {
-                font-size: 6rem;
-                padding-right: 5vw;
-            }
-            /* @media ${device.xl} {
-                font-size: 6rem;
-            } */
-        }
     }
 
     img {
